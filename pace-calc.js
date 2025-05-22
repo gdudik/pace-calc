@@ -51,7 +51,7 @@ server.on('message', (msg, rinfo) => {
   console.log(`Retransmitting packet to port 55567`);
   
   // Send using the buffer's length
-  client.send(buffer, 0, buffer.length, 55567, '192.168.1.44', (err) => {
+  client.send(buffer, 0, buffer.length, 55567, '127.0.0.1', (err) => {
     if (err) {
       console.error('Error sending packet:', err);
     } else {
